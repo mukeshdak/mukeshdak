@@ -1,12 +1,5 @@
-In Ayodhya, there ruler was Dashrath.
-
-Dashrath was father of Ram.
-
-Ram had to go to exile.
-
-....
-.
-.
-..
-.
-.
+<p>The <em><strong>Ramayana</strong> </em> is an ancient Sanskrit 
+              epic which follows Prince Rama's quest to rescue his beloved wife 
+              Sita from the clutches of Ravana with the help of an army of monkeys. 
+              It is traditionally attributed to the authorship of the sage Valmiki 
+              and dated to around 500 BCE to 100 BCE. </p>
