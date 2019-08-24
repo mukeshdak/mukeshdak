@@ -1,20 +1,117 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="A Github website having demos by Mukesh Dak">
+    <meta name="author" content="Custom code by Mukesh Dak">
+    <meta name="generator" content="Hand coded by Mukesh Dak">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Git hosted demos by Mukesh Dak</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" ¿>
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <style>
+        table.dataTable {
+            border-collapse: collapse !important;
+        }
+    </style>
     <script>
-        $(function () {
-            $("#header").load("assets/header.html");
+        $(function (){           
             $("#md_nav").load("assets/nav.html");
             $("#footer").load("assets/footer.html");
             $("#demo").load("demo_list.html");
         });
-    </script>
-    <div id="header"></div>
-</head>
-
+    </script>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
 <body>
+
+  <div class="container">
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "order": [[1, "asc"]],
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                "columnDefs": [
+                    {
+                        "targets": [0],
+                        "visible": true,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [1],
+                        "visible": true
+                    }
+                ]
+            });
+
+            $('a.toggle-vis').on('click', function (e) {
+                e.preventDefault();
+
+                // Get the column API object
+                var column = table.column($(this).attr('data-column'));
+
+                // Toggle the visibility
+                column.visible(!column.visible());
+            });
+        });
+    </script>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header clearfix">
+                <h2 class="pull-left" style="display: inline-block">Finance</h2>
+                <a href="/tables/add" class="btn btn-success float-right btn-sm px-1 py-0 mr-3" id="next">Add</a>
+            </div>
+
+            <table id="example" class="table table-bordered table-sm" style="width:100%">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Site</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="http://mukeshdak.com">mukeshdak.com</a></td>
+                    <td>Main Website of Mukesh Dak</td>
+                    <td><a href='/#/edit/1' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a
+                            href='/#/delete/1' title='Delete Record' data-toggle='tooltip'>Del</a></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td><a href="http://bhulo.com">bhulo.com</a></td>
+                    <td>Site to remember everything.</td>
+                    <td><a href='/#/edit/2' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a
+                            href='/#/delete/2' title='Delete Record' data-toggle='tooltip'>Del</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.getElementById("next").focus();
+    </script>
+</div><!-- close container-->
+    
+
+    
+    
+    
+    
+    
+    
     <div id="md_nav"></div>
 <div class="container">
    <p>Here are some demos <ul><div id="demo"></div></ul>
