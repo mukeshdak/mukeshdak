@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"¿>
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <style>
+        table.dataTable{border-collapse:collapse !important;}
+    </style>
+</head>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+    <div class="container">
+        <a class="navbar-brand" href="http://khushi.science">Dak</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Code for drop down menu-->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Apps</a>
+                    <div class="dropdown-menu">
+                        <a href="http://khushi.science/posts" class="dropdown-item">Posts</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="http://khushi.science/demo">Demo</a>
+                        <a class="dropdown-item" href="http://khushi.science/databases">Databases</a>
+                        <a class="dropdown-item" href="http://khushi.science/colors">Colors</a>
+                        <a class="dropdown-item" href="http://khushi.science/tables">Tables</a>
+                        <a class="dropdown-item" href="http://khushi.science/finance">Finance</a>
+                        <a class="dropdown-item" href="http://khushi.science/javascript">Javascript</a>
+                        <a class="dropdown-item" href="http://khushi.science/payments">Payments</a>
+                        <a class="dropdown-item" href="http://khushi.science/tasks">Tasks</a>
+                        <a class="dropdown-item" href="http://khushi.science/words">Words</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="http://khushi.science/todo">ToDo</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://bhulo.com/md/">Bhulo</a>
+                </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="http://khushi.science/users/logout"><i class="fa fa-sign-out"
+                                                                                          aria-hidden="true"></i> Logout</a>
+                    </li>
+                            </ul>
+        </div>
+    </div>
+</nav><div class="container">    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "order": [[ 1, "asc" ]],
+                "paging":   true,
+                "ordering": true,
+                "info": true,
+                "columnDefs": [
+                    {
+                        "targets": [ 0 ],
+                        "visible": true,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [ 1 ],
+                        "visible": true
+                    }
+                ]
+            });
+
+            $('a.toggle-vis').on( 'click', function (e) {
+                e.preventDefault();
+
+                // Get the column API object
+                var column = table.column( $(this).attr('data-column') );
+
+                // Toggle the visibility
+                column.visible( ! column.visible() );
+            } );
+        } );
+    </script>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header clearfix">
+                <h2 class="pull-left" style="display: inline-block">Finance</h2>
+                <a href="/tables/add" class="btn btn-success float-right btn-sm px-1 py-0 mr-3" id="next">Add</a>
+            </div>
+
+             <table id="example" class="table table-bordered table-sm" style="width:100%"><thead><tr><th>#</th><th>Account</th><th>Value</th><th>Notes</th><th>Action</th></tr></thead><tbody><tr><td>81</td><td>mdpayments</td><td>-847222</td><td>ok1</td><td><a href='/finance/edit/81' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a href='/finance/delete/81' title='Delete Record' data-toggle='tooltip'>Del</a></td></tr><tr><td>64</td><td>RKK last paid 8-Mar</td><td>45361</td><td>.</td><td><a href='/finance/edit/64' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a href='/finance/delete/64' title='Delete Record' data-toggle='tooltip'>Del</a></td></tr><tr><td>66</td><td>Super Annuation SCL</td><td>508547</td><td>LIC ID:12751 GS/48173</td><td><a href='/finance/edit/66' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a href='/finance/delete/66' title='Delete Record' data-toggle='tooltip'>Del</a></td></tr><tr><td>68</td><td>PF With SCL</td><td>1650065</td><td>ok</td><td><a href='/finance/edit/68' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a href='/finance/delete/68' title='Delete Record' data-toggle='tooltip'>Del</a></td></tr><tr><td>78</td><td>BOB HL 25690600003904</td><td>-2991918</td><td></td><td><a href='/finance/edit/78' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a href='/finance/delete/78' title='Delete Record' data-toggle='tooltip'>Del</a></td></tr><tr><td>89</td><td>Liquidity</td><td>124561</td><td>Liquidity1</td><td><a href='/finance/edit/89' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a href='/finance/delete/89' title='Delete Record' data-toggle='tooltip'>Del</a></td></tr><tr><td>82</td><td>4H2 TUL SBI 36132252135</td><td>-496287</td><td>ok</td><td><a href='/finance/edit/82' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a href='/finance/delete/82' title='Delete Record' data-toggle='tooltip'>Del</a></td></tr></tbody></table>        </div>
+    </div>
+    <script>
+        document.getElementById("next").focus();
+    </script>
+</div><!-- close container-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
