@@ -18,19 +18,9 @@
             border-collapse: collapse !important;
         }
     </style>
-    <script>
-        $(function (){           
-            $("#md_nav").load("assets/nav.html");
-            $("#footer").load("assets/footer.html");
-            $("#demo").load("demo_list.html");
-        });
-    </script>    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
 <body>
-
-  <div class="container">
+  <div class="container mt-3">
     <script>
         $(document).ready(function () {
             $('#example').DataTable({
@@ -66,43 +56,37 @@
     <div class="row">
         <div class="col-md-12">
             <div class="page-header clearfix">
-                <h2 class="pull-left" style="display: inline-block">Finance</h2>
-                <a href="/tables/add" class="btn btn-success float-right btn-sm px-1 py-0 mr-3" id="next">Add</a>
+                <h2 class="pull-left" style="display: inline-block">Demos by Mukesh Dak</h2>                
             </div>
 
             <table id="example" class="table table-bordered table-sm" style="width:100%">
                 <thead>
                 <tr>
-                    <th>id</th>
-                    <th>Site</th>
-                    <th>Description</th>
-                    <th>Action</th>
+                    <th>Dir</th>
+                    <th>Demo</th>
+                    <th>Description</th>        
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>1</td>
                     <td><a href="http://mukeshdak.com">mukeshdak.com</a></td>
-                    <td>Main Website of Mukesh Dak</td>
-                    <td><a href='/#/edit/1' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a
-                            href='/#/delete/1' title='Delete Record' data-toggle='tooltip'>Del</a></td>
+                    <td>Main Website of Mukesh Dak</td>      
                 </tr>
 
                 <tr>
                     <td>2</td>
                     <td><a href="http://bhulo.com">bhulo.com</a></td>
                     <td>Site to remember everything.</td>
-                    <td><a href='/#/edit/2' title='Update Record' data-toggle='tooltip'>Edit</a> &nbsp; <a
-                            href='/#/delete/2' title='Delete Record' data-toggle='tooltip'>Del</a></td>
                 </tr>
 
                 </tbody>
             </table>
         </div>
     </div>
-    <script>
-        document.getElementById("next").focus();
-    </script>
+      
+      
+
 </div><!-- close container-->
     
 
@@ -118,6 +102,14 @@
 </div>
 
     <div id="footer"></div>
-</body>
 
+<script>
+        $(function (){           
+            $("#md_nav").load("assets/nav.html");
+            $("#footer").load("assets/footer.html");
+            $("#demo").load("demo_list.html");
+        });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
 </html>
