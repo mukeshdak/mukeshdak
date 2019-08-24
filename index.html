@@ -18,8 +18,14 @@
             border-collapse: collapse !important;
         }
     </style>
+            
+    <script>
+        $(function (){           
+            $("#md_nav").load("assets/nav.html");
+            $("#demo_table").load("demo_table.html");
+            $("#demo").load("demo_list.html");
+        });
 
-          <script>
         $(document).ready(function () {
             $('#example').DataTable({
                 "order": [[1, "asc"]],
@@ -50,6 +56,7 @@
             });
         });
     </script>
+    
     </head>
 <body>
     <div id="md_nav"></div>    
@@ -86,12 +93,6 @@
    <p>Here are some demos <ul><div id="demo"></div></ul>
 </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script>
-        $(function (){           
-            $("#md_nav").load("assets/nav.html");
-            $("#demo_table").load("demo_table.html");
-            $("#demo").load("demo_list.html");
-        });
-    </script>
+
 </body>
 </html>
