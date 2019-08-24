@@ -20,8 +20,7 @@
     </style>
     </head>
 <body>
-    <div id="md_nav"></div>          
-    
+    <div id="md_nav"></div>    
   <div class="container" style="margin-top: 70px;">
   
     <div class="row">
@@ -35,18 +34,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><a href="http://mukeshdak.com">mukeshdak.com</a></td>
-                    <td>Main Website of Mukesh Dak</td>      
-                </tr>
-
-                <tr>
-                    <td>2</td>
-                    <td><a href="http://bhulo.com">bhulo.com</a></td>
-                    <td>This page has changed.</td>
-                </tr>
-
+                    <div id="demo_table"></div>
                 </tbody>
             </table>
         </div>
@@ -70,7 +58,7 @@
 <script>
         $(function (){           
             $("#md_nav").load("assets/nav.html");
-            $("#footer").load("assets/footer.html");
+            $("#demo_table").load("demo_table.html");
             $("#demo").load("demo_list.html");
         });
     </script>
