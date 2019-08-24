@@ -23,26 +23,11 @@
         $(function (){           
             $("#md_nav").load("assets/nav.html");
             $("#demo_table").load("demo_table.html");
-            $("#demo").load("demo_list.html");
         });
 
         $(document).ready(function () {
             $('#example').DataTable({
-                "order": [[1, "asc"]],
-                "paging": true,
-                "ordering": true,
-                "info": true,
-                "columnDefs": [
-                    {
-                        "targets": [0],
-                        "visible": true,
-                        "searchable": false
-                    },
-                    {
-                        "targets": [1],
-                        "visible": true
-                    }
-                ]
+                "order": [[1, "asc"]]
             });
 
             $('a.toggle-vis').on('click', function (e) {
@@ -88,6 +73,7 @@
 <tr><td><a href="/demos/0013/index.html">0013</a></td><td>TinDog script</td><td>d</td></tr>
 <tr><td><a href="/demos/0014/index.html">0014</a></td><td>DataTable Alternate</td><td>d</td></tr>
 <tr><td><a href="/demos/0015/index.html">0015</a></td><td>DataTable Example</td><td>d</td></tr>
+<div id="demo_table"></div>
                 </tbody>
             </table>
         </div>
@@ -95,7 +81,7 @@
 
 </div><!-- close container--> 
     
-  <ul><div id="demo"></div></ul>
+
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
