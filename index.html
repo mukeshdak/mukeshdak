@@ -22,38 +22,8 @@
 <body>
     <div id="md_nav"></div>          
     
-  <div class="container mt-3">
-    <script>
-        $(document).ready(function () {
-            $('#example').DataTable({
-                "order": [[1, "asc"]],
-                "paging": true,
-                "ordering": true,
-                "info": true,
-                "columnDefs": [
-                    {
-                        "targets": [0],
-                        "visible": true,
-                        "searchable": false
-                    },
-                    {
-                        "targets": [1],
-                        "visible": true
-                    }
-                ]
-            });
-
-            $('a.toggle-vis').on('click', function (e) {
-                e.preventDefault();
-
-                // Get the column API object
-                var column = table.column($(this).attr('data-column'));
-
-                // Toggle the visibility
-                column.visible(!column.visible());
-            });
-        });
-    </script>
+  <div class="container" style="margin-top: 70px;">
+  
 
     <div class="row">
         <div class="col-md-12">
@@ -107,6 +77,37 @@
             $("#md_nav").load("assets/nav.html");
             $("#footer").load("assets/footer.html");
             $("#demo").load("demo_list.html");
+        });
+    </script>
+      <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "order": [[1, "asc"]],
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                "columnDefs": [
+                    {
+                        "targets": [0],
+                        "visible": true,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [1],
+                        "visible": true
+                    }
+                ]
+            });
+
+            $('a.toggle-vis').on('click', function (e) {
+                e.preventDefault();
+
+                // Get the column API object
+                var column = table.column($(this).attr('data-column'));
+
+                // Toggle the visibility
+                column.visible(!column.visible());
+            });
         });
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
