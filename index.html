@@ -22,23 +22,7 @@
     <script>
         $(function (){           
             $("#md_nav").load("assets/nav.html");
-            $("#demo_table").load("demo_table.html");
-        });
-
-        $(document).ready(function () {
-            $('#example').DataTable({
-                "order": [[1, "asc"]]
-            });
-
-            $('a.toggle-vis').on('click', function (e) {
-                e.preventDefault();
-
-                // Get the column API object
-                var column = table.column($(this).attr('data-column'));
-
-                // Toggle the visibility
-                column.visible(!column.visible());
-            });
+            $("#demo_table").load("/demo_table.html");
         });
     </script>
     
@@ -77,13 +61,25 @@
                 </tbody>
             </table>
         </div>
-    </div>      
+    </div>
+</div><!-- close container-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+            $(document).ready(function () {
+            $('#example').DataTable({
+                "order": [[1, "asc"]]
+            });
 
-</div><!-- close container--> 
-    
+            $('a.toggle-vis').on('click', function (e) {
+                e.preventDefault();
 
+                // Get the column API object
+                var column = table.column($(this).attr('data-column'));
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+                // Toggle the visibility
+                column.visible(!column.visible());
+            });
+        });
+    </script>
 </body>
 </html>
