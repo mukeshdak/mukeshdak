@@ -34,40 +34,58 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
 var dataSet = [
-    [ '<a href="/demos/0001/index.html">0001</a>', 'Bootstrap 4.1.3 template', ''],
-    [ '<a href="/demos/0002/index.html">0002</a>', 'Bootstrap 4 - Horizontal and vertical centering.', ''],
-    [ '<a href="/demos/0003/index.html">0003</a>', 'Sweet Alert example with bootstrap template', ''],
-    [ '<a href="/demos/0004/index.html">0004</a>', 'Bootstrap-4 Modal Window ', ''],
-    [ '<a href="/demos/0005/index.html">0005</a>', 'Accordian example', ''],
-    [ '<a href="/demos/0006/index.html">0006</a>', 'Breadcrumb ', ''],
-    [ '<a href="/demos/0006/index.html">0007</a>', 'Card', ''],
-    [ '<a href="/demos/0008/index.html">0008</a>', 'Collapsible ', ''],
-    [ '<a href="/demos/0009/index.html">0009</a>', 'Dropdown button ', ''],
-    [ '<a href="/demos/0010/index.html">0010</a>', 'Material CSS', ''],
-    [ '<a href="/demos/0010/index.html">0011</a>', 'Load content with Ajax', ''],
-    [ '<a href="/demos/0010/index.html">0012</a>', 'Bootstrap Slider', ''],
-    [ '<a href="/demos/0010/index.html">0013</a>', 'TinDog script', ''],
-    [ '<a href="/demos/0010/index.html">0014</a>', 'DataTable Alternate', ''],
-    [ '<a href="/demos/0010/index.html">0015</a>', 'DataTable Example', ''],
-    [ '<a href="/demos/0010/index.html">0016</a>', 'Message at the bottom right of the page', ''],
-    [ '<a href="/demos/0010/index.html">0017</a>', 'Page refresh link', ''],
-    [ '<a href="/demos/0010/index.html">0018</a>', 'Math Object of JavaScript', ''],
-    [ '<a href="/demos/0010/index.html">0019</a>', 'Jquery Example', ''],
-    [ '<a href="/demos/0010/index.html">0020</a>', 'Hide links with jQuery', ''],
-    [ '<a href="/demos/0010/index.html">0021</a>', 'button selector jQuery', ''],
-    [ '<a href="/demos/0010/index.html">0022</a>', 'table row color even odd jQuery', ''],
+    [ '0001', 'Bootstrap 4.1.3 template', ''],
+    [ '0002', 'Bootstrap 4 - Horizontal and vertical centering.', ''],
+    [ '0003', 'Sweet Alert example with bootstrap template', ''],
+    [ '0004', 'Bootstrap-4 Modal Window ', ''],
+    [ '0005', 'Accordian example', ''],
+    [ '0006', 'Breadcrumb ', ''],
+    [ '0007', 'Card', ''],
+    [ '0008', 'Collapsible ', ''],
+    [ '0009', 'Dropdown button ', ''],
+    [ '0010', 'Material CSS', ''],
+    [ '0011', 'Load content with Ajax', ''],
+    [ '0012', 'Bootstrap Slider', ''],
+    [ '0013', 'TinDog script', ''],
+    [ '0014', 'DataTable Alternate', ''],
+    [ '0015', 'DataTable Example', ''],
+    [ '0016', 'Message at the bottom right of the page', ''],
+    [ '0017', 'Page refresh link', ''],
+    [ '0018', 'Math Object of JavaScript', ''],
+    [ '0019', 'Jquery Example', ''],
+    [ '0020', 'Hide links with jQuery', ''],
+    [ '0021', 'button selector jQuery', ''],
+    [ '0022', 'table row color even odd jQuery', ''],
 ];
 
     $(document).ready(function() {
-        $('#example').DataTable( {
+
+        $('#example').DataTable({
             data: dataSet,
+
+            stateSave: true,
+
             "order": [[ 0, "desc" ]],
+            "columnDefs": [
+                {
+                    "targets": [ 2 ],
+                    "visible": false
+                }
+            ],
+
             columns: [
                 { title: "Dir" },
                 { title: "Demo Name" },
                 { title: "Description" }
-            ]
-        } );
+            ],
+        });
+
+        var table = $('#example').DataTable();
+        $('#example tbody').on('click', 'tr', function () {
+            var data = table.row( this ).data();
+            window.location.href = "/demos/"+data[0]+"/index.html";
+        });
+
     } );
 </script>
 </body>
