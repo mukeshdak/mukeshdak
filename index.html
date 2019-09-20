@@ -17,75 +17,58 @@
         table.dataTable {
             border-collapse: collapse !important;
         }
-    </style>            
+    </style>
     <script>
-        $(function (){
+        $(function(){
             $("#md_nav").load("assets/nav.html");          
         });
     </script>
-    
     </head>
 <body>
-    <div id="md_nav"></div>    
-  <div class="container" style="margin-top: 70px;">
-  
-    <div class="row">
-        <div class="col-md-12">
-            <table id="example" class="table table-bordered table-sm" style="width:100%">
-                <thead>
-                <tr>
-                    <th>Dir</th>
-                    <th>Demo</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-<tr><td><a href="/demos/0001/index.html">0001</a></td><td>Bootstrap 4.1.3 template</td><td> </td></tr>
-<tr><td><a href="/demos/0002/index.html">0002</a></td><td>Bootstrap 4 - Horizontal and vertical centering.</td><td> </td></tr>
-<tr><td><a href="/demos/0003/index.html">0003</a></td><td>Sweet Alert example with bootstrap template</td><td> </td></tr>
-<tr><td><a href="/demos/0004/index.html">0004</a></td><td>Bootstrap-4 Modal Window</td><td> </td></tr>
-<tr><td><a href="/demos/0005/index.html">0005</a></td><td>Accordian example</td><td> </td></tr>
-<tr><td><a href="/demos/0006/index.html">0006</a></td><td>Breadcrumb</td><td> </td></tr>
-<tr><td><a href="/demos/0007/index.html">0007</a></td><td>Card</td><td> </td></tr>
-<tr><td><a href="/demos/0008/index.html">0008</a></td><td>Collapsible</td><td> </td></tr>
-<tr><td><a href="/demos/0009/index.html">0009</a></td><td>Dropdown button</td><td> </td></tr>
-<tr><td><a href="/demos/0010/index.html">0010</a></td><td>Material CSS</td><td> </td></tr>
-<tr><td><a href="/demos/0011/index.html">0011</a></td><td>Load content with Ajax</td><td> </td></tr>
-<tr><td><a href="/demos/0012/index.html">0012</a></td><td>Bootstrap Slider</td><td> </td></tr>
-<tr><td><a href="/demos/0013/index.html">0013</a></td><td>TinDog script</td><td> </td></tr>
-<tr><td><a href="/demos/0014/index.html">0014</a></td><td>DataTable Alternate</td><td> </td></tr>
-<tr><td><a href="/demos/0015/index.html">0015</a></td><td>DataTable Example</td><td> </td></tr>
-<tr><td><a href="/demos/0016/index.html">0016</a></td><td>Message at the bottom right of the page</td><td> </td></tr>
-<tr><td><a href="/demos/0017/index.html">0017</a></td><td>Page refresh link</td><td> </td></tr>
-<tr><td><a href="/demos/0018/index.html">0018</a></td><td>Math Object of JavaScript</td><td> </td></tr>
-<tr><td><a href="/demos/0019/index.html">0019</a></td><td>Jquery Example</td><td> </td></tr>
-<tr><td><a href="/demos/0020/index.html">0020</a></td><td>Hide links with jQuery</td><td> </td></tr>
-<tr><td><a href="/demos/0021/index.html">0021</a></td><td>button selector jQuery</td><td> </td></tr>
-<tr><td><a href="/demos/0022/index.html">0022</a></td><td>table row color even odd jQuery</td><td> </td></tr>
 
-
-                </tbody>
-            </table>
-        </div>
-    </div>
+<div id="md_nav"></div>
+<div class="container" style="margin-top: 70px;">
+    <table id="example" class="table table-bordered table-sm table-hover"></table>
 </div><!-- close container-->
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
-            $(document).ready(function () {
-            $('#example').DataTable({
-                "order": [[0, "desc"]]
-            });
+var dataSet = [
+    [ '<a href="/demos/0001/index.html">0001</a>', 'Bootstrap 4.1.3 template', ''],
+    [ '<a href="/demos/0002/index.html">0002</a>', 'Bootstrap 4 - Horizontal and vertical centering.', ''],
+    [ '<a href="/demos/0003/index.html">0003</a>', 'Sweet Alert example with bootstrap template', ''],
+    [ '<a href="/demos/0004/index.html">0004</a>', 'Bootstrap-4 Modal Window ', ''],
+    [ '<a href="/demos/0005/index.html">0005</a>', 'Accordian example', ''],
+    [ '<a href="/demos/0006/index.html">0006</a>', 'Breadcrumb ', ''],
+    [ '<a href="/demos/0006/index.html">0007</a>', 'Card', ''],
+    [ '<a href="/demos/0008/index.html">0008</a>', 'Collapsible ', ''],
+    [ '<a href="/demos/0009/index.html">0009</a>', 'Dropdown button ', ''],
+    [ '<a href="/demos/0010/index.html">0010</a>', 'Material CSS', ''],
+    [ '<a href="/demos/0010/index.html">0011</a>', 'Load content with Ajax', ''],
+    [ '<a href="/demos/0010/index.html">0012</a>', 'Bootstrap Slider', ''],
+    [ '<a href="/demos/0010/index.html">0013</a>', 'TinDog script', ''],
+    [ '<a href="/demos/0010/index.html">0014</a>', 'DataTable Alternate', ''],
+    [ '<a href="/demos/0010/index.html">0015</a>', 'DataTable Example', ''],
+    [ '<a href="/demos/0010/index.html">0016</a>', 'Message at the bottom right of the page', ''],
+    [ '<a href="/demos/0010/index.html">0017</a>', 'Page refresh link', ''],
+    [ '<a href="/demos/0010/index.html">0018</a>', 'Math Object of JavaScript', ''],
+    [ '<a href="/demos/0010/index.html">0019</a>', 'Jquery Example', ''],
+    [ '<a href="/demos/0010/index.html">0020</a>', 'Hide links with jQuery', ''],
+    [ '<a href="/demos/0010/index.html">0021</a>', 'button selector jQuery', ''],
+    [ '<a href="/demos/0010/index.html">0022</a>', 'table row color even odd jQuery', ''],
+];
 
-            $('a.toggle-vis').on('click', function (e) {
-                e.preventDefault();
-
-                // Get the column API object
-                var column = table.column($(this).attr('data-column'));
-
-                // Toggle the visibility
-                column.visible(!column.visible());
-            });
-        });
-    </script>
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            data: dataSet,
+            "order": [[ 0, "desc" ]],
+            columns: [
+                { title: "Dir" },
+                { title: "Demo Name" },
+                { title: "Description" }
+            ]
+        } );
+    } );
+</script>
 </body>
 </html>
