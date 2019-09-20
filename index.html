@@ -17,6 +17,10 @@
         table.dataTable {
             border-collapse: collapse !important;
         }
+        td.highlight {
+            font-weight: bold;
+            color: red;
+        }
     </style>
     <script>
         $(function(){
@@ -85,6 +89,7 @@ var dataSet = [
             var data = table.row(this).data();
             var mdrow = "<td>"+data[0]+"</td>" + "<td><a href='/demos/"+data[0]+"/index.html' target='_blank'>"+data[1]+"</a></td>";
             $(this).html(mdrow);
+            $(this).addClass('highlight');
         });
 
     } );
