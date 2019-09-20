@@ -1,0 +1,92 @@
+<!-- Bootstrap 4 template page -->
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script>
+        function generate_random(){
+            var x = 1 + Math.floor( 100 * Math.random() );
+            document.getElementById("md_random").innerHTML = x;
+        }
+
+        function generate_random_from_to(){
+            var rn_from = 1 * document.getElementById("rn_from").value;
+            var rn_to = 1 * document.getElementById("rn_to").value;
+            var x = rn_from + Math.floor( (rn_to - rn_from) * Math.random() );
+            document.getElementById("md_random_from_to").innerHTML = x;
+        }
+    </script>
+
+
+
+    <title>Javascript Math object</title>
+</head>
+<body>
+<div class="container">
+    <div class="display-4">Javascript Math Object</div>
+    <hr>
+    <div class="clearfix m-3"></div>
+
+
+    <div class="row">
+
+        <div class="col">
+            <div class="card m-3" style="max-width: 20rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Math Object Functions list</h5>
+                    <p class="card-text">
+                        1. Random Number
+                        <br>2. Square Root
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+    <div class="card m-2" style="max-width: 20rem;">
+        <div class="card-body">
+            <h5 class="card-title">Random Number</h5>
+            <p class="card-text">
+                <a href="javascript:generate_random();">Clck 2 generate any random integer between 1 and 100.</a>
+                <br>
+                <p id="md_random"></p>
+            </p>
+        </div>
+    </div>
+        </div>
+
+        <div class="col">
+    <div class="card m-2" style="max-width: 20rem;">
+        <div class="card-body">
+            <h5 class="card-title">Random Number</h5>
+            <p class="card-text">
+                <a href="javascript:generate_random_from_to();">Click 2 Generate random integer</a><br> &nbsp;<br>
+                From : <input type="number" value="30" id="rn_from" style="width: 4rem;">
+                To : <input type="number" value="55" id="rn_to" style="width: 4rem;">
+                <br>
+                <p id="md_random_from_to"></p>
+            </p>
+        </div>
+    </div>
+            </div>
+
+
+    </div>
+<!--    row finished-->
+
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

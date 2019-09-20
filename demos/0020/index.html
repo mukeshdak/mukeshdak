@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button#b1").click(function(){
+                $("a").toggle(500);
+            });
+
+            $("button#b2").click(function(){
+                $("li:first").toggle(500);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button id="b1">Show/Hide links</button>
+
+<p>This is a paragraph with little content.
+<br>
+    only link will hide <a href="http://mukeshdak.com">Go to Mukeshdak.com</a></p>
+<p>Instead of 'a', if element "href" is selected, then whole paragraph will be hidden.</p>
+
+<br>Here is the list.
+<ol>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+    <li>item5</li>
+</ol>
+<button id="b2">Show/Hide item1</button>
+
+
+</body>
+</html>
