@@ -61,6 +61,7 @@ var dataSet = [
     $(document).ready(function() {
 
         $('#example').DataTable({
+            "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
             data: dataSet,
 
             stateSave: true,
