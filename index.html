@@ -38,29 +38,31 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
 var dataSet = [
-    [ '0001', 'Bootstrap 4.1.3 template', ''],
-    [ '0002', 'Bootstrap 4 - Horizontal and vertical centering.', ''],
-    [ '0003', 'Sweet Alert example with bootstrap template', ''],
-    [ '0004', 'Bootstrap-4 Modal Window ', ''],
+    [ '0001', 'Bootstrap 4.1.3 template', 'Bootstrap4'],
+    [ '0002', 'Horizontal and vertical centering in BS', 'Bootstrap4'],
+    [ '0003', 'Sweet Alert example', 'Bootstrap4'],
+    [ '0004', 'Modal Window ', 'Bootstrap4'],
     [ '0005', 'Accordian example', ''],
-    [ '0006', 'Breadcrumb ', ''],
-    [ '0007', 'Card', ''],
-    [ '0008', 'Collapsible ', ''],
-    [ '0009', 'Dropdown button ', ''],
-    [ '0010', 'Material CSS', ''],
-    [ '0011', 'Load content with Ajax', ''],
-    [ '0012', 'Bootstrap Slider', ''],
-    [ '0013', 'TinDog script', ''],
-    [ '0014', 'DataTable Alternate', ''],
-    [ '0015', 'DataTable Example', ''],
-    [ '0016', 'Message at the bottom right of the page', ''],
-    [ '0017', 'Page refresh link', ''],
-    [ '0018', 'Math Object of JavaScript', ''],
-    [ '0019', 'Jquery Example', ''],
-    [ '0020', 'Hide links with jQuery', ''],
-    [ '0021', 'button selector jQuery', ''],
-    [ '0022', 'table row color even odd jQuery', ''],
+    [ '0006', 'Breadcrumb ', 'Bootstrap4'],
+    [ '0007', 'Card', 'Bootstrap4'],
+    [ '0008', 'Collapsible ', 'Bootstrap4'],
+    [ '0009', 'Dropdown button ', 'Bootstrap4'],
+    [ '0010', 'Material CSS', 'Bootstrap4'],
+    [ '0011', 'Load content with Ajax', 'Ajax'],
+    [ '0012', 'Bootstrap Slider', 'Bootstrap4'],
+    [ '0013', 'TinDog script', 'Bootstrap4'],
+    [ '0014', 'DataTable Alternate', 'DataTable'],
+    [ '0015', 'DataTable Example', 'DataTable'],
+    [ '0016', 'Message at the bottom right of the page', 'Bootstrap4'],
+    [ '0017', 'Page refresh link', 'Javascript'],
+    [ '0018', 'Math Object of JavaScript', 'Javascript'],
+    [ '0019', 'Jquery Example', 'jQuery'],
+    [ '0020', 'Hide links with jQuery', 'jQuery'],
+    [ '0021', 'button selector jQuery', 'jQuery'],
+    [ '0022', 'table row color even odd jQuery', 'jQuery'],
     [ '0023', 'make block draggable.', 'jQuery'],
+    [ '0024', 'getting cursor details.', 'jQuery'],
+    [ '0024', 'make links clickable.', 'jQuery'],
 ];
 
     $(document).ready(function() {
@@ -68,14 +70,13 @@ var dataSet = [
         $('#example').DataTable({
             "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
             data: dataSet,
-
             stateSave: true,
 
             "order": [[ 0, "desc" ]],
             "columnDefs": [
                 {
                     "targets": [ 2 ],
-                    "visible": false
+                    "visible": true,
                 }
             ],
             columns: [
