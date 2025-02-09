@@ -1,3 +1,172 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --hover-color: #2980b9;
+        }
 
-- This is my landing page, hosted by github.
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .links-section {
+            margin: 2rem 0;
+            padding: 1rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .link-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+        }
+
+        .link-card a:hover {
+            color: var(--hover-color);
+        }
+
+        .link-description {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <div class="subtitle">Your Gateway to Important Resources</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="links-section">
+            <h2 class="section-title">Main Links</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <a href="/about">About Us</a>
+                    <div class="link-description">Learn more about who we are and what we do</div>
+                </div>
+                <div class="link-card">
+                    <a href="/services">Our Services</a>
+                    <div class="link-description">Explore our range of services</div>
+                </div>
+                <div class="link-card">
+                    <a href="/contact">Contact</a>
+                    <div class="link-description">Get in touch with us</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="links-section">
+            <h2 class="section-title">Resources</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <a href="/docs">Documentation</a>
+                    <div class="link-description">Access our comprehensive guides and documentation</div>
+                </div>
+                <div class="link-card">
+                    <a href="/blog">Blog</a>
+                    <div class="link-description">Read our latest articles and updates</div>
+                </div>
+                <div class="link-card">
+                    <a href="/downloads">Downloads</a>
+                    <div class="link-description">Access important files and resources</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Your Website Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
